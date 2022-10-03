@@ -18,6 +18,24 @@
         </div>
  
 
+        <form action="/expense/updateBudget" method='POST' class="container_1" >
+    
+            <input type="number" placeholder="enter budget" name="budget" min="0.00"  max="100000000.00" class="input-field | margin-bottom-400"
+            step="0.01"
+            >
+            <input type="submit" class="btn-primary | margin-bottom-400"value="Update Budget" >
+        </form>
+
+
+
+
+        <form action="/expense/createExpense" method='POST'>
+            <input type="text" placeholder="Enter an expense" name='itemName'>
+            <input type="number" placeholder="$0" name="itemCost"  min="0.00"  max="100000000.00" >
+            <input type="submit">
+        </form>
+        
+
     
 
     <ul>
@@ -34,17 +52,8 @@
 
 
 
-<form action="/expense/createExpense" method='POST'>
-    <input type="text" placeholder="Enter an expense" name='itemName'>
-    <input type="number" placeholder="$0" name="itemCost"  min="0.00"  max="100000000.00" >
-    <input type="submit">
-</form>
 
-<form action="/expense/updateBudget" method='POST'>
-    
-    <input type="number" placeholder="enter budget" name="budget" min="0.00"  max="100000000.00" >
-    <input type="submit">
-</form>
+
 
     </div>
     

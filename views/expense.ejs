@@ -8,8 +8,18 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Expense</h1>
-    <p> hello <%= user.budget %></p>
+    <div class="container">
+        <h1 class="margin-bottom-900">Adultig Finance Tracker</h1>
+        <div class="container_1">
+            <h2 class="margin-bottom-400" >  <span class="username"> Hello <%= user.userName %>, </span> Your Total Monthy Budget is
+           <span> $ <%= user.budget %></span>
+            
+            </h2>
+        </div>
+ 
+
+    
+
     <ul>
     <% expenses.forEach( el => { %>
         <li class='todoItem' data-id='<%=el._id%>'>
@@ -19,8 +29,9 @@
         </li>
 <% }) %>    
 </ul>
-<h2><%= user.userName %> Total Monthy Budget is <%= user.budget %>  <span class="currency"><%= user.currency %></span>
-    has $ <%=  user.budget - total %> left </h2>
+<h2><span><%= user.userName %> Total Monthy Budget is <%= user.budget %>  </span> <span class="currency"><%= user.currency %></span>
+    has, <%=  user.budget - total %> left </h2>
+
 
 
 <form action="/expense/createExpense" method='POST'>
@@ -34,6 +45,9 @@
     <input type="number" placeholder="enter budget" name="budget" min="0.00"  max="100000000.00" >
     <input type="submit">
 </form>
+
+    </div>
+    
 
 <script src="js/main.js"></script>
 </body>

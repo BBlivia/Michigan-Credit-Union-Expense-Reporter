@@ -19,7 +19,7 @@ module.exports = {
         try{
             const expenseItems = await Expense.find({userId: req.user.id})
             const itemsLeft = await Expense.countDocuments({userId: req.user.id, completed:false})
-            const budget = await Budget.find({budget: req.body.budget})
+            //const budget = await Budget.find({budget: req.body.budget})
             const total = expenseItems.reduce((sum, expense)=> expense.cost+sum, 0)
             console.log({total})
             

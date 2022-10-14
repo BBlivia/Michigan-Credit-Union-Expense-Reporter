@@ -36,17 +36,19 @@
         </form>
         
 
-    
+        <div class="expenses-container | margin-bottom-900">
+            <ul>
+                <% expenses.forEach( el => { %>
+                <li class='todoItem' data-id='<%=el._id%>'>
+                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.expense %></span>
+                    <span class=""> <%= el.cost %></span>
+                    <button class='del'> Delete </button>
+                </li>
+        <% }) %>    
+        </ul>
+        </div>
 
-    <ul>
-    <% expenses.forEach( el => { %>
-        <li class='todoItem' data-id='<%=el._id%>'>
-            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.expense %></span>
-            <span class=""> <%= el.cost %></span>
-            <button class='del'> Delete </button>
-        </li>
-<% }) %>    
-</ul>
+        
 <h2><span><%= user.userName %> Total Monthy Budget is <%= user.budget %>  </span> <span class="currency"><%= user.currency %></span>
     has, <%=  user.budget - total %> left </h2>
 

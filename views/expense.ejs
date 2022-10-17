@@ -40,7 +40,7 @@
             <h3 class="margin-bottom-400">My expenses</h3>
             <ul class="items-container | margin-bottom-400">
                 <% expenses.forEach( el => { %>
-                <li class='todoItem' data-id='<%=el._id%>'>
+                <li class="expense-li | deleteExpense" data-id='<%=el._id%>'>
                     <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.expense %></span>
                     <span class=""> <%= el.cost %></span>
                     <button class='del'> Delete </button>

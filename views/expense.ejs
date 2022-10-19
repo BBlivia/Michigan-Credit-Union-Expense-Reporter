@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -27,6 +28,7 @@
         </form>
 
 
+        
 
 
         <form action="/expense/createExpense" method='POST' class="container_1">
@@ -42,8 +44,12 @@
                 <% expenses.forEach( el => { %>
                 <li class="expense-li | deleteExpense" data-id='<%=el._id%>'>
                     <span  class="item | <%= el.completed === true ? 'completed' : 'not'%>"><%= el.expense %></span>
-                    <span class=""> <%= el.cost %></span>
-                    <button class='del'> Delete </button>
+                    <span class="cost"> Cost:
+                        <span class="expense"> <%= el.cost %> <%= user.currency %>  </span>
+                    
+                    </span>
+                    <button class="del | delete-btn"> Delete </button>
+                   
                 </li>
         <% }) %>    
         </ul>

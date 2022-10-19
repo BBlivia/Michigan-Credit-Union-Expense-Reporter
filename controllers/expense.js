@@ -23,7 +23,7 @@ module.exports = {
             const total = expenseItems.reduce((sum, expense)=> expense.cost+sum, 0)
             console.log({total})
             
-            res.render('expense.ejs', {expenses: expenseItems, left: itemsLeft, total, user:req.user, budget:budget  })
+            res.render('expense.ejs', {expenses: expenseItems, left: itemsLeft, total, user:req.user  })
         }catch(err){
             console.log(err)
         }

@@ -7,6 +7,7 @@ const budgetController = require('../controllers/budget')
 router.get('/', ensureAuth, expenseController.getExpense)
 
 router.post('/createExpense', expenseController.createExpense)
+router.post('/createBudget', expenseController.createExpense)
 
  router.post('/createBudget', budgetController.createBudget)
  router.post('/updateBudget', budgetController.updateBudget)

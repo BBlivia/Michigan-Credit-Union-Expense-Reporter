@@ -34,6 +34,7 @@ module.exports = {
         try{
             await Expense.findOneAndDelete({_id: req.body.expenseIdFromJSFile})
             console.log('Expense Deleted')
+            res.json('Deleted It')
         }catch(err){
             console.log(err)
         }

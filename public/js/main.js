@@ -17,7 +17,7 @@ async function deleteExpense(){
             method: 'delete',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
-                'expenseIdIdFromJSFile': expenseId
+                'expenseIdFromJSFile': expenseId
             })
         })
         const data = await response.json()

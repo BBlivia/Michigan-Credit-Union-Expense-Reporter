@@ -13,6 +13,6 @@ router.post('/createExpense', expenseController.createExpense)
 
 // router.put('/markIncomplete', todosController.markIncomplete)
 
-// router.delete('/deleteTodo', todosController.deleteTodo)
+router.delete('/deleteExpense', expenseController.deleteExpense)
 
 module.exports = router

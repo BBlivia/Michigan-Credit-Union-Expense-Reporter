@@ -15,22 +15,23 @@
         <li class='todoItem' data-id='<%=el._id%>'>
             <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.expense %></span>
             <span class=""> <%= el.cost %></span>
-            <span class='del'> Delete </span>
+            <button class='del'> Delete </button>
         </li>
 <% }) %>    
 </ul>
-<h2><%= user.userName %> has $ <%= total %> left </h2>
+<h2><%= user.userName %> Total Monthy Budget is <%= user.budget %>  <span class="currency"><%= user.currency %></span>
+    has $ <%=  user.budget - total %> left </h2>
 
 
 <form action="/expense/createExpense" method='POST'>
     <input type="text" placeholder="Enter an expense" name='itemName'>
-    <input type="number" placeholder="$0" name="itemCost">
+    <input type="number" placeholder="$0" name="itemCost"  min="0.00"  max="100000000.00" >
     <input type="submit">
 </form>
 
 <form action="/expense/updateBudget" method='POST'>
     
-    <input type="number" placeholder="enter budget" name="budget">
+    <input type="number" placeholder="enter budget" name="budget" min="0.00"  max="100000000.00" >
     <input type="submit">
 </form>
 

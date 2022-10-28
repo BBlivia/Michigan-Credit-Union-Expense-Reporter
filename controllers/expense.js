@@ -32,7 +32,7 @@ module.exports = {
     deleteExpense: async(req, res)=>{
         console.log(req.body.expenseIdFromJSFile)
         try{
-            await Expense.findOneAndDelete({_id: req.req.body.expenseIdFromJSFile})
+            await Expense.findOneAndDelete({_id: req.body.expenseIdFromJSFile})
             console.log('Expense Deleted')
         }catch(err){
             console.log(err)

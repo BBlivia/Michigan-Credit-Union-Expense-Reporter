@@ -1,24 +1,23 @@
 const Budget = require('../models/Budget')
-const Expense = require('../models/Expense')
+const User = require('../models/User')
 
 module.exports = {
     
     createBudget: async (req, res)=>{
         try{
-            await Todo.create({todo: req.body.todoItem, completed: false, userId: req.user.id})
-            console.log('Todo has been added!')
-            res.redirect('/todos')
+            await Budget.create({budget: req.body.budget, completed: false, userId: req.user.id})
+            console.log('A new budget has been added!')
+            res.redirect('/expense')
         }catch(err){
             console.log(err)
         }
     },
     updateBudget: async (req, res)=>{
         try{
-            await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
-                completed: true
-            })
-            console.log('Marked Complete')
-            res.json('Marked Complete')
+            await User.findOneAndUpdate({_id: req.user}, {budget: req.body.budget})
+            console.log('budget updated')
+            
+            res.redirect('/expense')
         }catch(err){
             console.log(err)
         }

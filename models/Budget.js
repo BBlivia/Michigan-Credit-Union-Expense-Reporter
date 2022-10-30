@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const BudgetSchema = new mongoose.Schema({
- Budget: {
+ budget: {
     type: Number,
    
   },
@@ -12,4 +12,4 @@ const BudgetSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('Budge', BudgetSchema)
+module.exports = mongoose.model('Budget', BudgetSchema)

@@ -1,6 +1,6 @@
 
 const Expense = require('../models/Expense');
-
+const Budget = require('../models/Budget');
 module.exports = {
     //getExpense
     
@@ -19,10 +19,11 @@ module.exports = {
         try{
             const expenseItems = await Expense.find({userId: req.user.id})
             const itemsLeft = await Expense.countDocuments({userId: req.user.id, completed:false})
+            const budget = await Budget.find({budget: req.body.budget})
             const total = expenseItems.reduce((sum, expense)=> expense.cost+sum, 0)
             console.log({total})
             
-            res.render('expense.ejs', {expenses: expenseItems, left: itemsLeft, total, user:req.user  })
+            res.render('expense.ejs', {expenses: expenseItems, left: itemsLeft, total, user:req.user, budget:budget  })
         }catch(err){
             console.log(err)
         }

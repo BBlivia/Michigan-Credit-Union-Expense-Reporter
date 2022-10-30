@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>Expense</h1>
+    <p> hello <%= user.budget %></p>
     <ul>
     <% expenses.forEach( el => { %>
         <li class='todoItem' data-id='<%=el._id%>'>
@@ -24,6 +25,12 @@
 <form action="/expense/createExpense" method='POST'>
     <input type="text" placeholder="Enter an expense" name='itemName'>
     <input type="number" placeholder="$0" name="itemCost">
+    <input type="submit">
+</form>
+
+<form action="/expense/updateBudget" method='POST'>
+    
+    <input type="number" placeholder="enter budget" name="budget">
     <input type="submit">
 </form>
 

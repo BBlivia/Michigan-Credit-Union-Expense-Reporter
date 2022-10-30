@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Expense</h1>
+    <ul>
+    <% expenses.forEach( el => { %>
+        <li class='todoItem' data-id='<%=el._id%>'>
+            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.expense %></span>
+            <span class=""> <%= el.cost %></span>
+            <span class='del'> Delete </span>
+        </li>
+<% }) %>    
+</ul>
+<h2><%= user.userName %> has $ <%= total %> left </h2>
+
+
+<form action="/expense/createExpense" method='POST'>
+    <input type="text" placeholder="Enter an expense" name='itemName'>
+    <input type="number" placeholder="$0" name="itemCost">
+    <input type="submit">
+</form>
+
+<script src="js/main.js"></script>
+</body>
+</html>

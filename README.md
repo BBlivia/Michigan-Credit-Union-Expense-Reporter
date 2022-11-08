@@ -16,9 +16,9 @@ Tech used:  JavaScript, Node, Express, Ejs, Bootstrap
 The app is at a working build however in the future it would be nice to 
 - allow users to add a reminder list, as it pertains to their budget, 
 
--build out more features for time based tracking, possibly calander GUI
+- build out more features for time based tracking, possibly calander GUI
 
--Additionally it I would like to add some comparison tools such as a monthly or yearly spending history that made it easier for users to compare different periods of their spending.
+- Additionally it I would like to add some comparison tools such as a monthly or yearly spending history that made it easier for users to compare different periods of their spending.
 
 - add a saving and downloading feature, that made it possible for users to locally have text files or pdfs of their saved budgets.
 

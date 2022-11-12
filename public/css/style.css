@@ -1,10 +1,10 @@
 :root {
     --clr-accent-100: hsl(212, 45%, 94%);
-    --clr-accent-300: hsla(230, 87%, 61%, 0.375);
-    --clr-accent-400: hsl(230, 87%, 61%);
-    --clr-accent-500: hsl(230, 60%, 40%);
+    --clr-accent-300: hsla(143, 58%, 13%, 0.375);
+    --clr-accent-400: hsl(149, 71%, 16%);
+    --clr-accent-500: hsl(149, 71%, 16%);
   
-    --clr-primary-400: hsl(207, 7%, 33%);
+    --clr-primary-400: hsl(70, 7%, 33%);
   
     --clr-neutral-100: rgb(255, 255, 255);
     --clr-neutral-900: hsl(207, 94%, 5%);
@@ -254,6 +254,7 @@
     }
   
     .container_1,
+    .dropdown
     .btn-primary,
     .btn-secondary {
       width: 100%;
@@ -349,6 +350,21 @@
       min-width: auto;
     }
   }
+  @media all and (max-width: 50em) {
+    .dropdown {
+      width: 40%;
+      display: flex;
+      align-items: center;
+    }
+  
+    
+  }
+  
+
+  
+
+
+
   
   @media (max-width: 30em) {
     .delete-btn {
@@ -371,3 +387,33 @@
   .margin-bottom-900 {
     margin-bottom: 90px;
   }
+  
+.dropdown{
+  margin:10px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.none{
+  display: none;
+}
+.white{
+  
+  background-color: var(--clr-accent-100);
+  color: var(--clr-primary-400)
+}
+/*
+.bb{
+  margin-right: 58px;
+  position: absolute
+}
+.but{
+  width: 73%;
+  position: absolute
+}
+
+*/

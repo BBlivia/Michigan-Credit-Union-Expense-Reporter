@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="margin-bottom-900">Adultig Finance Tracker</h1>
+        <h1 class="margin-bottom-900">Michigan Credit Union Expense Reporter</h1>
         <div class="container_1">
             <h2 class="margin-bottom-400" >  <span class="username"> Hello <%= user.userName %>, </span> Your Total Monthy Budget is
            <span class="userbudget" > $ <%= user.budget %></span>
@@ -18,16 +18,26 @@
             </h2>
         </div>
  
-
-        <form action="/expense/updateBudget" method='POST' class="container_1" >
-    
-            <input type="number" placeholder="enter budget" name="budget" min="0.00"  max="100000000.00" class="input-field | margin-bottom-400"
-            step="0.01"
-            >
-            <input type="submit" class="btn-primary | margin-bottom-400"value="Update Budget" >
-        </form>
-
-
+        <div class="container_1 dropdown"> Add Budget
+            <button class=" none  btn-primary">
+                
+                <form action="/expense/updateBudget" method='POST' class="  ut" > 
+     
+                    <input type="number" placeholder="enter budget" name="budget" min="0.00"  max="100000000.00" class="input-field | margin-bottom-400 bb"
+                    step="0.01"
+                    >
+                    <input type="submit" class="btn-primary | margin-bottom-400 white"value="Update Budget" >
+                </form>
+        
+          
+           
+             
+            </button>
+ 
+       
+        </div>
+        
+       
         
 
 
@@ -56,8 +66,8 @@
         </div>
         <div class="container_1 | margin-bottom-900">
             <h2 class="| margin-bottom-900">
-                <span class="username"><%= user.userName %></span> has
-                <span class="userbudget"><%= user.budget - total %></span>
+                <span class="username"><%= user.userName %></span> has 
+                <span class="userbudget">$ <%= user.budget - total %></span>
                 <span class="currency"><%= user.preferredCurrency %> </span> left to
                 spend
             </h2>

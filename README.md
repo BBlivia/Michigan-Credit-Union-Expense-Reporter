@@ -1,4 +1,4 @@
-# Adulting Finance Tracker
+# Michigan Credit Union Expense Reporter
 
 This is full stack Budget/Expense tracker for the 100Devs Agency. The app allows users to keep track of their spending by creating an account. Once logged in users can enter a Monthly budget, and each expense as they come up. 
 

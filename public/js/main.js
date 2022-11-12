@@ -4,9 +4,7 @@ Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteExpense)
 })
 
-Array.from(expenseItem).forEach((el)=>{
-    el.addEventListener('click', markComplete)
-})
+
 
 
 
@@ -28,3 +26,9 @@ async function deleteExpense(){
     }
 }
 
+
+document.querySelector('.dropdown').addEventListener('click', showBudget)
+
+function showBudget(){
+    document.querySelector('.none').style.display = 'block';
+}
